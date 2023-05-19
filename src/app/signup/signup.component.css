@@ -1,0 +1,64 @@
+.otp{
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+    padding: 10px;
+    border-radius: 10px;
+    border: #ff4081 1px solid;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .input-row{
+   display: flex; 
+   align-items: center;
+   margin-bottom: 5px;
+   
+  }
+  h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family:monospace;
+    color: rgb(86, 212, 250);
+    padding-top: 20px;
+  }
+  .example-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    flex-direction: column;
+  }
+  p{
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .mat-button{
+    background-color: rgb(86, 212, 250);
+    color: white;
+  }
+  .call{
+    color: rgb(86, 212, 250);
+    width: 50px;
+    padding-left: 10px;
+  }
+  .icon-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+  }
+  .icon-row mat-icon{
+    width: 70px;
+    height: 70px;
+    /* padding: 20px; */
+    font-size: 60px;
+  }
+  .example-margin{
+    padding: 10px;
+  }
+  

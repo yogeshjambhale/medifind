@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-2"> -->
+        <!-- <app-sidenav></app-sidenav> -->
+
+        <!-- </div> -->
+        <div class="col-md-6"
+            style="display:flex;  margin-top: 50px; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="prod" *ngFor="let prod of prodItems">
+                <div>
+                    <h2>{{prod.product_name | titlecase}}</h2>
+                    <p>{{prod.company | titlecase}}</p>
+                    <p>QTY:{{prod.quantity}}</p>
+
+                </div>
+
+                <div>
+                    MRP:<span>{{prod.mrp | currency:'INR'}}</span>
+                    <h2>{{prod.quantity*prod.mrp-prod.mrp*prod.discount/100 | currency:'INR'}}</h2>
+
+                </div>
+            </div>
+            <div class="address" >
+                <div *ngFor="let address of address">
+                    <h1>Address</h1>
+                    <p>{{address.name | uppercase}}</p>
+                    <p>{{address.address | titlecase}}</p>
+                    <p><span>{{address.city | titlecase}}</span> - <span>{{address.pincode}}</span>, <span>{{address.state | titlecase}}</span>.</p>
+                    <p>+91 -{{ address.mobile}}</p>
+                </div>
+                <div class="example-button-row">
+                    <input type="submit" class="mat-button" color="primary" (click)="openAdress()" value="Add New">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 pmt-section" *ngIf="prodItems">
+            <h2> Payment Details</h2>
+            <div class="payment-box">
+                <div class="payment-details">
+                    <div>
+                        <h3>MRP</h3>
+                        <h3>Discount</h3>
+                        <h3>Dilivery Charges</h3>
+                        <hr>
+                        <h3>Total Amount</h3>
+                    </div>
+                    <div>
+                        <h3>{{totalMrp | currency:'INR'}}</h3>
+                        <h3>{{discValue | currency:'INR'}}</h3>
+                        <h3><span>FREE</span></h3>
+                        <hr>
+                        <h3><span>{{totalMrp-discValue | currency:'INR'}}</span></h3>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <h2>Payment Mode</h2>
+                <div>
+                    <input type="radio"> Pay With UPI
+                </div>
+                <div>
+                    <input type="radio"> Cash On Dilevery
+                </div>
+            </div>
+            <div class="example-button-row">
+                <input type="submit" class="mat-button" color="primary" value="Place Order" (click)="addAddress()">
+            </div>
+        </div>
+    </div>
+</div>

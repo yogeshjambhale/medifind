@@ -1,0 +1,84 @@
+<div class="cart container">
+   <div class="row" *ngIf="cartDataNull">
+      <h1>ORDER SUMMARY</h1>
+      <div class="col-md-8">
+         <h2> Products</h2>
+         <div class="prod" *ngFor="let prod of prodItems ">
+            <div>
+               <h2>{{prod.product_name | titlecase}}</h2>
+               <p>{{prod.company | titlecase}}</p>
+               <h3>{{prod.drug_name | titlecase}}</h3>
+               <button mat-button color="accent" (click)="singleRemove(prod.id)">remove</button>
+            </div>
+            <div>
+               MRP:<span>{{prod.mrp | currency:'INR'}}</span>
+               <h2>{{prod.quantity*prod.mrp-prod.mrp*prod.discount/100 | currency:'INR'}}</h2>
+               <div class="qtyBtn">
+                  <button class="btn" (click)="incQty(prod.id,prod.quantity)">
+                     <mat-icon>add</mat-icon>
+                  </button>
+                  <span>{{prod.quantity}}</span>
+                  <button class="btn" (click)="decQty(prod.id,prod.quantity)">
+                     <mat-icon>remove</mat-icon>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="remove">
+         <button mat-button color="accent" (click)="removeAll()" >Remove All</button>
+        </div> -->
+      </div>
+      <div class="col-md-4">
+         <h2> Payment Details</h2>
+         <div class="payment-box">
+            <div class="payment-details">
+               <div>
+                  <h3>MRP</h3>
+                  <h3>Discount</h3>
+                  <h3>Dilivery Charges</h3>
+                  <hr>
+                  <h3>Total Amount</h3>
+               </div>
+               <div>
+                  <h3>{{totalMrp | currency:'INR'}}</h3>
+                  <h3>{{discValue | currency:'INR'}}</h3>
+                  <h3><span>FREE</span></h3>
+                  <hr>
+                  <h3><span>{{totalMrp-discValue | currency:'INR'}}</span></h3>
+               </div>
+            </div>
+            <div class="button-row">
+               <a routerLink="/checkout"><button mat-button color="accent" class="btn"
+                     (click)="checkOut()">Checkout</button> </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="empty-cart" *ngIf="cartDataNull===null">
+      <div class="text">
+         <div class="logo">
+            <span>Medi<span class="find">Find</span></span>
+         </div>
+         <h1>Hurry Up ! </h1>
+         <h2>Cart Is Empty</h2>
+      </div>
+      <div class="img">
+         <img src="assets/images/login (2).svg" width="350" height="350">
+         <div class="example-button-row">
+
+            <button class="btn">Shop Medicine</button>
+
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- <div class="empty-cart">
+      <h1>Your Cart Is Empty</h1>
+      <img src="assets/images/png2.png" width="300" height="300" >
+      <div class="example-button-row">
+              
+         <button mat-button color="accent" >Shop Medicine</button>
+         
+       </div>
+   </div> -->

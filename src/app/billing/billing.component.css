@@ -1,0 +1,88 @@
+.form-control{
+    /* margin: 50px 10px 50px 10px; */
+    padding: 10px;
+    width: 500px;
+    outline: none;
+    /* border-radius: 50px; */
+    height: 45px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.form-control::placeholder{
+    padding-left: 10px;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btn{
+    width: 80px;
+    /* height: 50px; */
+    margin: 50px;
+    padding: 10px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+@media screen and (max-width: 560px) {
+    .form-control{
+        margin-left: 20px;
+        padding: 10px;
+        width: 240px;
+        outline: none;
+        /* border-radius: 50px; */
+        height: 35px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .form-control::placeholder{
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    .searchbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+}
+@media screen and (min-width: 561px)and (max-width:700px){
+
+    .form-control{
+        margin-left: 20px;
+        padding: 10px;
+        width: 360px;
+        outline: none;
+        /* border-radius: 50px; */
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .form-control::placeholder{
+        padding-left: 5px;
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 701px)and (max-width:1075px){
+
+    .form-control{
+        margin-left: 20px;
+        padding: 10px;
+        width: 430px;
+        outline: none;
+        /* border-radius: 50px; */
+        height: 33px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .form-control::placeholder{
+        padding-left: 5px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,21 @@
+
+   
+   <div class="row searchbar">
+      <form [formGroup]="formGorup" class="example-form" >
+         <input formControlName="product" type="text"
+                class="form-control "
+                placeholder="Search for the medicine"
+                [formControl]="myControl"
+                [matAutocomplete]="auto">
+         <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" >
+           <mat-option *ngFor="let option of filteredOptions " routerLink="/prod-details/{{option.id}}"  [value]="option" >
+          
+              {{option.product_name}}
+           </mat-option>
+         </mat-autocomplete>
+       </form>
+   
+       <!-- <button type="button " class="btn btn-primary ">search</button> -->
+   </div>
+   <zxing-scanner></zxing-scanner>
+   

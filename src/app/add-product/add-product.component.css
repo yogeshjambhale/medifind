@@ -1,0 +1,35 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+  }
+  .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    padding: 10px;
+    margin: 20px;
+
+  }
+  .mat-button{
+    background-color: #3f51b5;
+    color: #fff;
+  }
+  .example-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px 0 ;
+  }
+  

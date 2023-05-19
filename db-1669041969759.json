@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "product_name": "atcol cv 10",
+      "drug_name": "atorvastatin",
+      "company": "aristo",
+      "id": 8
+    },
+    {
+      "product_name": "etizola 0.5",
+      "drug_name": "etizolam",
+      "company": "maccloads",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "product_name": "jbjbdjbd",
+      "drug_name": "nnBNb",
+      "company": "NbnBDN",
+      "manufacturer": "nnNBN",
+      "unit": 0,
+      "pack_of": "12",
+      "gst": "1",
+      "rac_no": "122"
+    },
+    {
+      "id": 11,
+      "product_name": "bcmabcn",
+      "drug_name": "cbnabc",
+      "company": "n nacbna",
+      "manufacturer": "ncnbcn",
+      "unit": 0,
+      "pack_of": "sdsd",
+      "gst": "1212",
+      "rac_no": "121"
+    }
+  ],
+  "cart-data": [
+    {
+      "product_name": "atcol cv 10",
+      "drug_name": "atorvastatin",
+      "company": "aristo",
+      "id": 8,
+      "quantity": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

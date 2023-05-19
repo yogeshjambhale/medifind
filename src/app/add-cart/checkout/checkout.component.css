@@ -1,0 +1,67 @@
+
+  .mat-button{
+    background-color: #3f51b5;
+    color: #fff;
+  }
+  .example-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 110px;
+  }
+  .pmt-section .example-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin: 20px 0;
+  }
+  .prod{
+   
+    width: 500px;
+    height: 90px;
+  }
+  .prod h2{
+    color: #ff4081;
+    margin: 0;
+  }
+  .address{
+    width: 500px;
+    height: 200px; 
+  }
+  .mat-button{
+    width: 100%;
+    background-color: #ff4081;
+    color: white;
+  }
+
+  .prod,.address,.payment-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }
+  .payment-box{
+    display: flex;
+    flex-direction: column; 
+    background-color: antiquewhite; 
+    border-radius: 5px;
+}
+.button-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.button-row .btn{
+    width: 100%;
+    background-color: #ff4081;
+    color: white;
+}
+.payment-box h3 span{
+    color: green;
+}

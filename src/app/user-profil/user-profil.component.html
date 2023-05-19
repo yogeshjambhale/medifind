@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="pro-info" *ngIf="user">
+                <img class="img" src="assets/images/avatar.png" >
+                <h1>{{user.name | titlecase}}</h1>
+                <h3>{{user.email }}</h3>
+                <h3>7057694596</h3>
+            </div>
+            <div class="other">
+                <div><mat-icon class="call">person</mat-icon><h1>Account Information</h1><mat-icon class="call">arrow_forward_ios</mat-icon></div>
+                <div><mat-icon class="call">local_shipping</mat-icon><h1>Deliveery Address</h1><mat-icon class="call">arrow_forward_ios</mat-icon></div>
+                <div><mat-icon class="call">person_add</mat-icon><h1>Refer & Earn</h1><mat-icon class="call">arrow_forward_ios</mat-icon></div>
+                <div><mat-icon class="call">perm_phone_msg</mat-icon><h1>Contact Us</h1><mat-icon class="call">arrow_forward_ios</mat-icon></div>
+                <div><mat-icon class="call">lock_open</mat-icon><h1>logout</h1><mat-icon class="call">arrow_forward_ios</mat-icon></div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="orders">
+                <h1>My Orders</h1>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>

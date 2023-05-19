@@ -1,0 +1,37 @@
+<div class="container" >
+    <div class="row" *ngIf="prodItems">
+        <div class="img col-md-6">
+         <img src="assets/images//category-img4.jpg" class="img" alt="">
+        </div>
+        <div class="discription col-md-6" >
+          <a href=""></a>
+           <div>
+            <h1>{{prodItems.product_name | titlecase}}</h1>
+            <h4>{{prodItems.drug_name | titlecase}}
+            </h4>
+           </div>
+           <div>
+            <h2>best price: <span>{{prodItems.mrp-prodItems.mrp*prodItems.discount/100 | currency:'INR'}}</span></h2>
+            <h5>MRP: <span class="mrp">{{prodItems.mrp | currency:'INR'}}</span> </h5>
+            <P>(Inclusive of all taxes)</P>
+            <P>* Get the best price on this product on orders above Rs 1299</P>
+            <H4>*10 Tablet(s) in a Strip</H4>
+            <P>*Mkt: {{prodItems.company | titlecase}}</P>
+            <p>*Mfd: {{prodItems.manufacturer | titlecase}}</p>
+            <p>* Delivery charges if applicable will be applied at checkout</p>
+           </div>
+           <div class="qtyBtn">
+            <button class="btn" (click)="prodQty('plus')">
+               <mat-icon>add</mat-icon>
+             </button>
+             <span><input type="text" value="{{hndlQty}}" disabled></span>
+             <button class="btn" (click)="prodQty('min')">
+               <mat-icon>remove</mat-icon>
+             </button>
+         </div>
+           <div class="button-row">   
+            <button mat-button color="accent" class="btn" (click)="AddProduct(prodItems)">ADD TO CART</button>  
+          </div>
+        </div>
+    </div>
+</div>

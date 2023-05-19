@@ -1,0 +1,122 @@
+/* .login-comp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+} */
+.img{
+  padding: 20px 60PX 20PX 20PX;
+}
+.login, .otp{
+  box-shadow: rgba(86, 212, 250, 0.16) 0px 3px 6px, rgba(86, 212, 250, 0.23) 0px 3px 6px;
+  padding: 10px;
+  border-radius: 10px;
+  /* border: rgb(86, 212, 250) 1px solid; */
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .input-row{
+   display: flex; 
+   align-items: center;
+   margin-bottom: 5px;
+   
+  }
+  .example-full-width,.login-comp {
+    /* width: 200px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family:monospace;
+    color: rgb(86, 212, 250);
+    padding-top: 20px;
+  }
+  .example-button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    flex-direction: column;
+  }
+  p{
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .mat-button{
+    background-color: rgb(86, 212, 250);
+    color: white;
+  }
+  .call{
+    color: rgb(86, 212, 250);
+    width: 50px;
+    padding-left: 10px;
+  }
+  .icon-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+  }
+  .icon-row mat-icon{
+    width: 70px;
+    height: 70px;
+    /* padding: 20px; */
+    font-size: 60px;
+  }
+  .example-margin{
+    padding: 10px;
+  }
+  .logo span{
+    padding: 0px;
+    color: rgb(86, 212, 250);
+    font-size: 30px; 
+    font-weight: 700; 
+    margin-left: 10px;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .logo span .find{
+    color: rgba(252, 207, 8, 0.973);
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: 560px){
+    .login{
+      width: 100%;
+      
+    }
+    .img{
+      width: 0;
+      display: none;
+    }
+  }
+  @media screen and (min-width: 561px)and (max-width:700px){
+    .login{
+      width: 100%;
+      
+    }
+    .img{
+      width: 0;
+      display: none;
+    }
+  }
+  @media screen and (min-width: 701px)and (max-width:1075px){
+    .login{
+      width: 100%;
+      
+    }
+    .img{
+      width: 0;
+      display: none;
+    }
+  }

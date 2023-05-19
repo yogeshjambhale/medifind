@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  mat-icon.edit{
+    color: rgb(38, 202, 17);
+  }
+  mat-icon.delete{
+    color: rgb(235, 27, 12);
+  }
+  td button{
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .example-button-row{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 20PX;
+  }
+  .example-button-row button{
+    background-color: #FF5721	;
+    color: #fff;
+  }

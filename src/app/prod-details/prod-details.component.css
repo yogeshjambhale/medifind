@@ -1,0 +1,58 @@
+h1{
+    padding-top: 50px;
+    font-weight: 800;
+    font-size: 28px;
+    color: #ff4081;
+}
+h4{
+    font-weight: 500;
+    font-size: 16px;
+}
+span{
+    font-weight: 500;
+    font-size: 20px; 
+    color: #ff4081;
+}
+.mat-button{
+    background-color: #ff4081;
+    color: white;
+}
+.img{
+    padding: 20px 60PX 20PX 20PX;
+    width:500px;
+    height: 400px;
+}
+.mrp{
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 17px; 
+    color: #ff4081;
+}
+.qtyBtn{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+.qtyBtn .btn{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #ff4081;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: white;
+    margin: 5px;
+}
+.qtyBtn span input{
+    font-size: 17px;
+    font-weight: 700;
+    width: 20px;
+    text-align: center;
+    border: none;
+    justify-content: center;
+    text-decoration: none;
+}
+
