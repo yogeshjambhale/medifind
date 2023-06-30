@@ -21,6 +21,8 @@ export class AddCartComponent implements OnInit {
   public id:number;
   cartNumber:number = 0;
   itemsCart:any = [];
+  cart:any
+  data:any
   
   constructor(private api :CartService,
               // private dialogRef :MatDialogRef<AddCartComponent>,
@@ -182,10 +184,14 @@ export class AddCartComponent implements OnInit {
   })
  }
  cartList(){
+  let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
   this.medApi.getCartList().subscribe((res)=>{
     console.log(res,'cart')
+    this.cart= res;
+      this.data = this.cart.filter((item: { userId: any; }) => item.userId == userId)
     if(res){
-      localStorage.setItem('cart',JSON.stringify(res))
+      localStorage.setItem('cart',JSON.stringify(this.data))
     }
   })
 }

@@ -25,6 +25,8 @@ export class CheckoutComponent implements OnInit {
   cart:any
   id:any
   cartProduct:any
+  adrss:any
+
    
   constructor(public dialog: MatDialog,
     private api: MedifindService,
@@ -207,10 +209,14 @@ export class CheckoutComponent implements OnInit {
     }
   }
   getAddress() {
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
     this.api.getAddress().subscribe(res => {
       console.log(res)
       this.address = res;
       console.log(this.address)
+      this.adrss = this.address.filter((item: { userId: any; }) => item.userId == userId);
+      console.log(this.data)
     })
   }
 }

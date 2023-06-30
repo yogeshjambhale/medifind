@@ -24,6 +24,8 @@ export class LogInComponent implements OnInit {
   public login = true
   hide = true
   cartNumber:number = 0;
+  cart:any
+  data:any
   cartData = new EventEmitter<productModel[] | []>();
 
   password = new FormControl('', [Validators.required, Validators.minLength(6)]);
@@ -131,14 +133,18 @@ export class LogInComponent implements OnInit {
       });
       
     }
-    this.cartList(userId);
+    this.cartList();
     this.cartNumberFunc();
   }
-  cartList(userId:number){
+  cartList(){
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
     this.api.getCartList().subscribe((res)=>{
       console.log(res,'cart')
+      this.cart= res;
+      this.data = this.cart.filter((item: { userId: any; }) => item.userId == userId)
       if(res){
-        localStorage.setItem('cart',JSON.stringify(res))
+        localStorage.setItem('cart',JSON.stringify(this.data))
       }
     })
   }

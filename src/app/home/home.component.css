@@ -10,6 +10,8 @@ h1{
     font-weight: 700;
     padding: 10px;
     margin: 20px;
+    color: black;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .brands, .categorys{
     padding: 10px;
@@ -27,11 +29,17 @@ h1{
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.brand:hover{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
 .category{
     width: 200px;
     height: 230px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+.category:hover{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .offers{
     padding: 10px;
@@ -65,6 +73,11 @@ h1{
     height: 150px; 
     border-radius: 50%;
 }
+.brand img:hover{
+    width: 160px;
+    height: 160px; 
+    border-radius: 60%;
+}
 .category{
     display: flex;
     align-items: center;
@@ -73,6 +86,11 @@ h1{
 .category img{
     width: 190px;
     height: 190px; 
+    
+}
+.category img:hover{
+    width: 200px;
+    height: 200px; 
     
 }
 @media screen and (max-width: 560px) {

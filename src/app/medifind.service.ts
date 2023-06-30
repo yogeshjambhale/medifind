@@ -14,13 +14,13 @@ export class MedifindService {
   constructor( private Http:HttpClient) { }
 // products api
   postProduct(data:any){
-    return this.Http.post<any>('http://localhost:8000/products',data)
+    return this.Http.post<any>('http://localhost:8000/products/',data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
   getProduct(){
-    return this.Http.get<any>('http://localhost:8000/products')
+    return this.Http.get<any>('http://localhost:8000/products/')
     .pipe(map((res:[])=>{
       return res;
     }))

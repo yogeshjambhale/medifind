@@ -18,7 +18,23 @@
         <div class="col-md-7">
             <div class="orders">
                 <h1>My Orders</h1>
-                <div></div>
+                <div class="order" *ngFor="let data of data">
+                    <div class="img">
+                        <img src="assets/images/category-img4.jpg" style="height:80px ; width: 60px;">
+                    </div>
+                    <div class="details">
+                        <div>
+                            <h2>delivered on tue jun 2</h2>
+                            <h3>{{data.product_name | titlecase}}</h3>
+                            <p>{{data.drug_name | titlecase}}</p>
+                            <h3>{{data.company | titlecase}}</h3>
+                        </div>
+                        <div class="last">
+                            <span>{{data.mrp | currency:'INR'}}</span>
+                            <span>Qty:{{data.quantity}}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
