@@ -190,7 +190,8 @@ export class AddCartComponent implements OnInit {
     console.log(res,'cart')
     this.cart= res;
       this.data = this.cart.filter((item: { userId: any; }) => item.userId == userId)
-    if(res){
+    if(this.data){
+      
       localStorage.setItem('cart',JSON.stringify(this.data))
     }
   })

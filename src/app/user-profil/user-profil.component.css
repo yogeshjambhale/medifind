@@ -5,16 +5,15 @@
 } */
 .pro-info{
     background-color: rgb(243, 243, 243);
-    width: 400px;
+    width: 100%;
     height: 300px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.img{
+.image{
     background-color: white;
     width: 120px;
     height: 120px;
@@ -30,7 +29,7 @@
 }
 .other{
     background-color: rgb(243, 243, 243);
-    width: 400px;
+    width: 100%;
     height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -54,8 +53,7 @@
     background-color: rgb(243, 243, 243);
     width: 600px;
     /* height: 600px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px 0;
     padding: 20px;  
 }
 .orders .order{
@@ -97,4 +95,88 @@
     justify-content: space-between;
     flex-direction: column;
 
+}
+@media screen and (max-width:560px){
+    .pro-info{
+        width: 100%;
+        height: 300px;
+        
+    }
+    .orders{
+        background-color: rgb(243, 243, 243);
+        width: 100%;
+        /* height: 600px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;  
+    }
+    .other{
+        background-color: rgb(243, 243, 243);
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px; 
+    }
+    .order h2{
+        font-size: 14px;
+        font-family: inherit;
+        
+    }
+    .order h3{
+        font-size: 13px;
+        font-family: inherit;
+        font-weight: 500;
+    }
+    .order{
+        width: 100%;
+    }
+    .img{
+        width: 20%;
+    }
+    .details{
+        width: 80%;
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 560px)and (max-width:767px){
+    .pro-info{
+        width: 100%;
+        height: 300px;
+        
+    }
+    .orders{
+        background-color: rgb(243, 243, 243);
+        width: 100%;
+        /* height: 600px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;  
+    }
+    .other{
+        background-color: rgb(243, 243, 243);
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px; 
+    }
+    
+}
+@media screen and (min-width: 768px)and (max-width:1075px){
+    .pro-info{
+        background-color: rgb(243, 243, 243);
+        width: 300px;
+        height: 300px;
+    }
+    .orders{
+        background-color: rgb(243, 243, 243);
+        width: 400px;
+        margin-left: 10px;
+    }
+    .other{
+        background-color: rgb(243, 243, 243);
+        width: 300px;
+        height: 300px;
+    }
 }

@@ -12,7 +12,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatBadgeModule} from '@angular/material/badge';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatMenuModule } from '@angular/material/menu';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { MatMenuModule } from '@angular/material/menu';
     FormsModule,
     MatBadgeModule,
     NgbCarouselModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
     
   ],
   exports:[
@@ -49,7 +50,8 @@ import { MatMenuModule } from '@angular/material/menu';
     // FormGroup,
     FormsModule,
     MatBadgeModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }

@@ -5,7 +5,7 @@
 
         <!-- </div> -->
         <div class="col-md-6"
-            style="display:flex;  margin-top: 50px; flex-direction: column; align-items: center; justify-content: center;">
+            style="display:flex;  margin-top: 50px; flex-direction: column; align-items: center; ">
             <div class="prod" *ngFor="let prod of prodItems">
                 <div>
                     <h2>{{prod.product_name | titlecase}}</h2>
@@ -56,11 +56,11 @@
             </div>
             <div>
                 <h2>Payment Mode</h2>
-                <div>
-                    <input type="radio"> Pay With UPI
+                <div class="payment">
+                    <input type="radio" name="payment"> Pay With UPI
                 </div>
-                <div>
-                    <input type="radio"> Cash On Dilevery
+                <div class="payment">
+                    <input type="radio" name="payment"> Cash On Dilevery
                 </div>
             </div>
             <div class="example-button-row">

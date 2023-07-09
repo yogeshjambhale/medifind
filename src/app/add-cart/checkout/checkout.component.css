@@ -19,6 +19,7 @@
    
     width: 500px;
     height: 90px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .prod h2{
     color: #ff4081;
@@ -27,6 +28,7 @@
   .address{
     width: 500px;
     height: 200px; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .mat-button{
     width: 100%;
@@ -49,6 +51,7 @@
     flex-direction: column; 
     background-color: antiquewhite; 
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .button-row{
     width: 100%;
@@ -61,9 +64,10 @@
     width: 100%;
     background-color: antiquewhite;
     color: black;
-    border: 1px solid #ff4081;
-    padding: 5px;
+    border: none;
+    padding: 10px;
     border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .mat-button:hover{
   background-color: #ff4081;
@@ -71,4 +75,37 @@
 }
 .payment-box h3 span{
     color: green;
+}
+.payment{
+  width: 100%;
+  background-color: antiquewhite;
+  color: black;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+@media screen and (max-width:767px){
+  .prod{
+   
+    width: 100%;
+    height: 90px;
+  }
+  .address{
+    width: 100%;
+    height: 200px; 
+  }
+}
+@media screen and (min-width: 768px)and (max-width:1075px){
+
+  .prod{
+   
+    width: 350px;
+    height: 90px;
+  }
+
+  .address{
+    width: 350px;
+    height: 200px; 
+  }
 }

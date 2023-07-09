@@ -91,6 +91,10 @@
     padding: 0;
   }
   @media screen and (max-width: 560px){
+    .login, .otp{
+      box-shadow:none;
+      
+    }
     .login{
       width: 100%;
       
@@ -101,6 +105,10 @@
     }
   }
   @media screen and (min-width: 561px)and (max-width:700px){
+    .login, .otp{
+      box-shadow:none;
+      
+    }
     .login{
       width: 100%;
       
@@ -111,6 +119,10 @@
     }
   }
   @media screen and (min-width: 701px)and (max-width:1075px){
+    .login, .otp{
+      box-shadow:none;
+      
+    }
     .login{
       width: 100%;
       

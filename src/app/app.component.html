@@ -3,28 +3,54 @@
     <!-- Navbar content -->
     <div class="col-sm-9">
       <a routerLink="/"><span>Medi<span class="find">Find</span></span></a>
-  
+
       <ul *ngIf="!cart">
         <li><a routerLink="/stocks">Stocks</a></li>
         <li><a routerLink="/sales">Sales</a></li>
         <li><a routerLink="/users">Users</a></li>
-        
+
       </ul>
       <app-billing *ngIf="cart"></app-billing>
     </div>
     <div class="login col-sm-3 ">
-      <a routerLink="/add-bills"><mat-icon *ngIf="cart"  matBadge="{{cartItems}}" matBadgeColor="primary" matBadgeSize="small">shopping_cart</mat-icon></a>
+      <a routerLink="/add-bills" class="cart"><mat-icon *ngIf="cart"  matBadge="{{cartItems}}" matBadgeColor="primary" matBadgeSize="small">shopping_cart</mat-icon></a>
       <!-- <span>0</span> -->
-      
-      <mat-icon *ngIf="adminShow"(click)="openDialog()" matBadgeColor="primary">person</mat-icon>
+
+      <!-- <mat-icon *ngIf="adminShow" (click)="openDialog()" matBadgeColor="primary">person</mat-icon>
       <mat-icon *ngIf="login" (click)="userlogOut()" matBadgeColor="primary">logout</mat-icon>
       <mat-icon *ngIf="adminShow" (click)=" openAdminDialog()" matBadgeColor="primary">supervised_user_circle</mat-icon>
-      <mat-icon *ngIf="adminlogin" (click)="adminlogOut()" matBadgeColor="primary">logout</mat-icon>
-      <a routerLink="/user-profil"><img *ngIf="login" class="username" src="assets/images/avatar.png" ></a>
+      <mat-icon *ngIf="adminlogin" (click)="adminlogOut()" matBadgeColor="primary">logout</mat-icon> -->
+      <mat-icon mat-button [matMenuTriggerFor]="beforeMenu" *ngIf="show">
+         person
+      </mat-icon>
+      <mat-menu #beforeMenu="matMenu"  xPosition="before">
+        <button mat-menu-item (click)="openDialog()">user login</button>
+        <button mat-menu-item (click)=" openAdminDialog()">admin login</button>
+      </mat-menu>
+
+      <a routerLink="/user-profil" class="profile-img"><img *ngIf="login" class="username" src="assets/images/avatar.png"></a>
+      
+
     </div>
-    
-    
+
+
   </nav>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+  <div class="bottomNav">
+    <a routerLink="/">
+      <mat-icon >home</mat-icon>
+    </a>
+    <a routerLink="/user-profil">
+      <mat-icon >person</mat-icon>
+    </a>
+    <a routerLink="/add-bills">
+      <mat-icon *ngIf="cart" matBadge="{{cartItems}}" matBadgeColor="primary" matBadgeSize="small">shopping_cart
+      </mat-icon>
+    </a>
+    <a >
+      <mat-icon  matBadgeColor="primary" matBadge="{{notifications}}"
+        matBadgeSize="small">notifications</mat-icon>
+    </a>
+  </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MedifindService } from '../medifind.service';
 
 @Component({
@@ -11,10 +12,15 @@ export class UserProfilComponent implements OnInit {
   user:any
   orders:any
   data:any
-  constructor( private api : MedifindService) { }
+  login:any
+  adminlogin:any
+  constructor( private api : MedifindService,
+    private router:Router) { }
 
   ngOnInit(): void {
 
+    this.login = localStorage.getItem('user') 
+    this.adminlogin = localStorage.getItem('admin')
    
     let userinfo = localStorage.getItem('user');
     this.user = userinfo && JSON.parse(userinfo);
@@ -30,7 +36,17 @@ export class UserProfilComponent implements OnInit {
       console.log(this.data)
     })
   }
-  
+  userlogOut(){
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart')
+    this.router.navigate(['/']);
+    location.reload()
+   }
+   adminlogOut(){
+    localStorage.removeItem('admin');
+    this.router.navigate(['/']);
+    location.reload()
+   }
 
 
 }

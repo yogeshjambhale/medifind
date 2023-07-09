@@ -4,6 +4,7 @@ import { address, productModel } from 'src/app/add-product/product-model';
 import { CartService } from 'src/app/cart.service';
 import { MedifindService } from 'src/app/medifind.service';
 import { FormComponent } from './form/form.component';
+import { OrderSuccessMessageComponent } from './order-success-message/order-success-message.component';
 
 @Component({
   selector: 'app-checkout',
@@ -77,7 +78,7 @@ export class CheckoutComponent implements OnInit {
         
         this.api.postOrders(this.cartProduct).subscribe((res) => {
           if (res) {
-            alert('order post successfuly')
+            this.openDialog();
           }
           console.log(res.id, 'i')
           let id = res.id;
@@ -218,5 +219,9 @@ export class CheckoutComponent implements OnInit {
       this.adrss = this.address.filter((item: { userId: any; }) => item.userId == userId);
       console.log(this.data)
     })
+  }
+  openDialog() {
+    this.dialog.open(OrderSuccessMessageComponent);
+    
   }
 }

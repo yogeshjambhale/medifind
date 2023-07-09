@@ -10,6 +10,8 @@ import { CartService } from '../cart.service';
 import { ForgetPasswordComponent } from '../forget-password/forget-password.component';
 import { MedifindService } from '../medifind.service';
 import { SignupComponent } from '../signup/signup.component';
+import {MatSnackBar,MatSnackBarHorizontalPosition,MatSnackBarVerticalPosition,} from '@angular/material/snack-bar';
+import { OrderSuccessMessageComponent } from '../add-cart/checkout/order-success-message/order-success-message.component';
 
 
 @Component({
@@ -48,13 +50,17 @@ export class LogInComponent implements OnInit {
   
   // formValue:FormGroup|any;
   formgroup:FormGroup|any
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   constructor(public dialog : MatDialog,
               private api:MedifindService,
               private http:HttpClient,
               private formbuilder:FormBuilder,
               private dialogRef :MatDialogRef<LogInComponent>,
               private cartApi : CartService,
-              private router:Router) { }
+              private router:Router,
+              private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   //  this.formValue = new FormGroup({
@@ -84,8 +90,8 @@ export class LogInComponent implements OnInit {
       return a.email == this.formgroup.value.email && a.password == this.formgroup.value.password
       })
       if(user){
-        alert("Login Sucessfully!!");
-        location.reload()
+        this.openLoginSuccess();
+        // location.reload()
         if(res){
           localStorage.setItem('user',JSON.stringify(user))
         }
@@ -95,7 +101,7 @@ export class LogInComponent implements OnInit {
          this.router.navigate(['/']);
          location.reload();
       }else{
-        alert("User not found!!");
+        this.openLoginFail();
       }
     })
   }
@@ -143,7 +149,7 @@ export class LogInComponent implements OnInit {
       console.log(res,'cart')
       this.cart= res;
       this.data = this.cart.filter((item: { userId: any; }) => item.userId == userId)
-      if(res){
+      if(this.data){
         localStorage.setItem('cart',JSON.stringify(this.data))
       }
     })
@@ -153,5 +159,18 @@ export class LogInComponent implements OnInit {
     this.cartNumber = cartValue.length;
     this.cartApi.cartSubject.next(this.cartNumber);
     // console.log(this.cartNumber);
+  }
+  openLoginSuccess() {
+    this._snackBar.open('Login Sucessfully!!', 'Done', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
+ 
+  }
+  openLoginFail() {
+    this._snackBar.open('User not found!!', 'Done', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
   }
 }

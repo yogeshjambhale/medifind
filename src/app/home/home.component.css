@@ -1,5 +1,5 @@
 ngb-carousel{
-    margin: 20px;
+    margin: 20px 0 20px 0;
 }
 ngb-carousel img{
     width: 100%;
@@ -14,7 +14,7 @@ h1{
     text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .brands, .categorys{
-    padding: 10px;
+    padding: 10px 70px 10px 70px;
     width: 100%;
     height: 250px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -29,18 +29,18 @@ h1{
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.brand:hover{
+/* .brand:hover{
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
+} */
 .category{
     width: 200px;
     height: 230px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
-.category:hover{
+/* .category:hover{
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
+} */
 .offers{
     padding: 10px;
     width: 100%;
@@ -67,17 +67,18 @@ h1{
 .brand h2{
     padding-bottom: 15px;
     font-size: 17px;
+    margin: 0;
 }
 .brand img{
     width: 150px;
     height: 150px; 
     border-radius: 50%;
 }
-.brand img:hover{
+/* .brand img:hover{
     width: 160px;
     height: 160px; 
     border-radius: 60%;
-}
+} */
 .category{
     display: flex;
     align-items: center;
@@ -88,11 +89,12 @@ h1{
     height: 190px; 
     
 }
-.category img:hover{
+/* .category img:hover{
     width: 200px;
     height: 200px; 
     
-}
+} */
+
 @media screen and (max-width: 560px) {
     ngb-carousel img{
         width: 100%;
@@ -113,7 +115,7 @@ h1{
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .offer img{
-        width: 100px;
+        width: 90px;
         height: 25px; 
     }
     h1{
@@ -125,42 +127,49 @@ h1{
     .brands, .categorys{
         padding: 10px;
         width: 100%;
-        height: 100px;
+        height: 140px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         margin-bottom: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        /* overflow: scroll; */
     }
     .brand h2{
         padding-bottom: 15px;
-        font-size: 5px;
+        padding-top: 10px;
+        font-size: 14px;
+        display: flex;
+        
     }
     .brand{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+    
     .brand img{
-        width: 50px;
-        height: 50px; 
+        width: 65px;
+        height: 65px; 
         border-radius: 50%;
     }
     .category{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
     }
     .category img{
-        width: 50px;
-        height: 50px; 
+        width: 65px;
+        height: 65px; 
         
     }
     .category h2{
-        /* padding-bottom: 15px; */
-        font-size: 5px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        display: flex;
     }
   }
   @media screen and (min-width: 560px)and (max-width:700px){
@@ -169,52 +178,13 @@ h1{
         width: 100%;
         height: 200px;
     }
-    .brand h2{
-        padding-bottom: 15px;
-        font-size: 5px;
-    }
-    .brand{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-    .brand img{
-        width: 100px;
-        height: 100px; 
-        border-radius: 50%;
-    }
-    .brand h2{
-        padding-bottom: 15px;
-        font-size: 10px;
-    }
-    .category{
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-    }
-    .category img{
-        width: 100px;
-        height: 100px; 
+    .brands, .categorys{
+        padding: 10px;
+        width: 100%;
+        height: 200px;
         
     }
-    .category h2{
-        /* padding-bottom: 15px; */
-        font-size: 10px;
-    }
     
-  }
-  @media screen and (min-width: 701px)and (max-width:1075px){
-
-    ngb-carousel img{
-        width: 100%;
-        height: 300px;
-    }
-    .brand h2{
-        padding-bottom: 15px;
-        font-size: 5px;
-    }
     .brand{
         width: 120px;
         height: 120px;
@@ -227,8 +197,9 @@ h1{
         border-radius: 50%;
     }
     .brand h2{
-        padding-bottom: 15px;
-        font-size: 15px;
+        /* padding-bottom: 10px; */
+        font-size: 17px;
+
     }
     .category{
         width: 120px;
@@ -238,11 +209,56 @@ h1{
     }
     .category img{
         width: 120px;
-        height: 120px;
+        height: 120px; 
         
     }
     .category h2{
         /* padding-bottom: 15px; */
-        font-size: 15px;
+        font-size: 17px;
+    }
+    
+  }
+  @media screen and (min-width: 701px)and (max-width:1075px){
+
+    ngb-carousel img{
+        width: 100%;
+        height: 300px;
+    }
+    .brands, .categorys{
+        padding: 10px;
+        width: 100%;
+        height: 230px;
+        
+    }
+    
+    .brand{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .brand img{
+        width: 150px;
+        height: 150px; 
+        border-radius: 50%;
+    }
+    .brand h2{
+        padding-bottom: 15px;
+        font-size: 19px;
+    }
+    .category{
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
+    .category img{
+        width: 150px;
+        height: 150px;
+        
+    }
+    .category h2{
+        /* padding-bottom: 15px; */
+        font-size: 19px;
     }
   }

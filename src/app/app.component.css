@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container-fluid{
+    padding-bottom: 45px;
+}
 .navbar{
     height: 90px;
     width: 100%;
@@ -95,11 +98,12 @@
 .login button {
     background-color: #fff;
     color: #FF4500;
-    font-size: 25px;
+    font-size: 17px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 800;
-    border-radius: 50px;
+    font-weight: 500;
+    border-radius: 5px;
     border: none;
+    margin-left: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .login button:hover{
@@ -130,83 +134,30 @@
     padding: 0;
     margin: 0;
 }
-ngb-carousel{
-    margin-top: 10px;
-}
-ngb-carousel img{
+
+.bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 400px;
-}
-h1{
-    font-size: 25px;
-    font-weight: 700;
+    background-color: #24aeb1;
     padding: 10px;
-    margin: 20px;
-}
-.brands, .categorys{
-    padding: 10px;
-    width: 100%;
-    height: 250px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-bottom: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.brand{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.category{
-    width: 200px;
-    height: 230px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-}
-.offers{
-    padding: 10px;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.offer{
-   width: 400px;
-   height: 100px;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.offer img{
-    width: 400px;
-    height: 100px; 
-}
-.brand{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.brand h2{
-    padding-bottom: 15px;
-    font-size: 17px;
-}
-.brand img{
-    width: 150px;
-    height: 150px; 
-    border-radius: 50%;
-}
-.category{
-    display: flex;
-    align-items: center;
-    flex-direction: column;  
-}
-.category img{
-    width: 190px;
-    height: 190px; 
-    
-}
+    justify-content: space-around;
+    display: none;
+
+  }
+  
+  .bottomNav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .bottomNav a.active {
+    color: #007bff;
+  }
+  
 @media screen and (max-width: 560px) {
     .navbar{
         height: 80px;
@@ -218,12 +169,12 @@ h1{
     }
     .navbar .col-sm-9 a{
         text-decoration: none;
-        margin-right: 50px;
+        margin-right: 70px;
     }
     .navbar .col-sm-9 span{
         padding: 10px;
         color: #fff;
-        font-size: 17px; 
+        font-size: 20px; 
         font-weight: 600; 
         margin-left: 10px;
         text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -247,17 +198,24 @@ h1{
         justify-content: center;
         background-color: #fff;
         color: #FF4500;
-        padding:5px;
+        padding:20px;
         font-weight: 300;
         border-radius: 50px;
         cursor: pointer;
         border: none;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         margin: 3px;
-        font-size: 15px;
+        font-size: 20px;
     }
-    
-    
+    .bottomNav{
+        display:inline-flex;
+    }
+    .cart{
+        display: none;
+    }
+    .profile-img{
+        display: none;
+    }
   }
   @media screen and (min-width: 561px)and (max-width:700px){
 
@@ -281,14 +239,14 @@ h1{
         justify-content: center;
         background-color: #fff;
         color: #FF4500;
-        padding:10px;
+        padding:20px;
         font-weight: 300;
         border-radius: 50px;
         cursor: pointer;
         border: none;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         margin: 5px;
-        font-size: 17px;
+        font-size: 20px;
     }
     .navbar .col-sm-9 span{
         padding: 10px;
@@ -297,6 +255,15 @@ h1{
         font-weight: 600; 
         margin-left: 10px;
         text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .bottomNav{
+        display:inline-flex;
+    }
+    .cart{
+        display: none;
+    }
+    .profile-img{
+        display: none;
     }
   }
   @media screen and (min-width: 701px)and (max-width:1075px){
@@ -321,14 +288,14 @@ h1{
         justify-content: center;
         background-color: #fff;
         color: #FF4500;
-        padding:15px;
+        padding:20px;
         font-weight: 300;
         border-radius: 50px;
         cursor: pointer;
         border: none;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         margin: 7px;
-        font-size: 19px;
+        font-size: 20px;
     }
     .navbar .col-sm-9 span{
         padding: 10px;

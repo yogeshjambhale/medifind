@@ -32,6 +32,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { UsersComponent } from './users/users.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { UserProfilComponent } from './user-profil/user-profil.component';
+import { OrderSuccessMessageComponent } from './add-cart/checkout/order-success-message/order-success-message.component';
 // import { ZXingScannerComponent, ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
@@ -65,6 +66,7 @@ import { UserProfilComponent } from './user-profil/user-profil.component';
     UsersComponent,
     ForgetPasswordComponent,
     UserProfilComponent,
+    OrderSuccessMessageComponent,
     // ZXingScannerComponent
   ],
   imports: [
@@ -86,7 +88,8 @@ import { UserProfilComponent } from './user-profil/user-profil.component';
     SignupComponent,
     AdminLoginComponent,
     FormComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    OrderSuccessMessageComponent
   ]
 })
 

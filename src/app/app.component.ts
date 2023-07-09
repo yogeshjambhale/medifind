@@ -19,15 +19,16 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'medifind';
   
-  adminShow: any
+  show: any
   login:any
   adminlogin:any
   cart:any
   name:any
+  notifications:number = 0;
   constructor(
     public dialog: MatDialog,
     private cartApi:CartService,
-    private router:Router
+    
   ) { 
     this.cartApi.cartSubject.subscribe((data)=>{
       this.cartItems = data;
@@ -37,7 +38,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.cartItemFunc();
 
-    this.adminShow = !localStorage.getItem('user') && !localStorage.getItem('admin')
+    this.show = !localStorage.getItem('user') && !localStorage.getItem('admin')
     this.login = localStorage.getItem('user') 
     this.adminlogin = localStorage.getItem('admin')
     this.cart = !localStorage.getItem('admin')
@@ -46,17 +47,7 @@ export class AppComponent {
     this.name = user && JSON.parse(user).name;
   }
 
- userlogOut(){
-  localStorage.removeItem('user');
-  localStorage.removeItem('cart')
-  this.router.navigate(['/']);
-  location.reload()
- }
- adminlogOut(){
-  localStorage.removeItem('admin');
-  this.router.navigate(['/']);
-  location.reload()
- }
+ 
   openDialog() {
     this.dialog.open(LogInComponent);
     
